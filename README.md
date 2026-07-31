@@ -1,7 +1,7 @@
 # windowspp
 Object oriented single header library made for simplifying creating native windows in C++
 
-# Example usage
+# example usage
 ```cpp
 #include "windowspp.h"
 
@@ -29,3 +29,6 @@ int main() {
     return App.Run();
 }
 ```
+# current goals
+- Implementing more important callbacks such as for WM_PAINT, WM_COMMAND etc.
+- Implementing a wrapper for UI creation
