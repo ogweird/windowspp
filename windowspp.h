@@ -112,10 +112,6 @@ private:
 			return 0;
 		}
 
-		case WM_PAINT: {
-			InvokeCallback(m_events.Paint);
-		}
-
 		case WM_CLOSE: {
 			InvokeCallback(m_events.Close);
 
