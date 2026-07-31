@@ -12,7 +12,7 @@ int main() {
     auto App = WindowsPP();
 
     // Create smart window (smart because smart pointer (get it? (im kms)))
-    auto Wnd = App.MakeSmartWindow("Hello!!", 800, 600);
+    auto Wnd = App.MakeWindow("Hello!!", 800, 600);
 
     // Create WindowEvents object for custom callbacks
     WindowEvents events{};
