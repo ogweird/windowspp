@@ -112,6 +112,10 @@ private:
 			return 0;
 		}
 
+		case WM_PAINT: {
+			InvokeCallback(m_events.Paint);
+		}
+
 		case WM_CLOSE: {
 			InvokeCallback(m_events.Close);
 
@@ -378,7 +382,7 @@ public:
 		return static_cast<int>(msg.wParam);
 	}
 
-	std::unique_ptr<Window> MakeSmartWindow(const std::string& title, unsigned int width, unsigned int height) const {
+	std::unique_ptr<Window> MakeWindow(const std::string& title, unsigned int width, unsigned int height) const {
 		try {
 			return std::make_unique<Window>(title, width, height);
 		}
@@ -388,7 +392,7 @@ public:
 		}
 	}
 
-	std::unique_ptr<Window> MakeSmartWindow(const std::string& title, const WindowSize& size) const {
+	std::unique_ptr<Window> MakeWindow(const std::string& title, const WindowSize& size) const {
 		try {
 			return std::make_unique<Window>(title, size);
 		}
